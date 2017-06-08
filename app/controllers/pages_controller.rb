@@ -31,6 +31,14 @@ def contest
   redirect_to "/welcome"
 end
 
+def secrets
+  if params[:magic_word] == "potter"
+    redirect_to "http://www.google.com"
+  elsif params[:magic_word] != "potter"
+     flash[:notice] = "You shall not pass!"
+     redirect_to "/"
+  end
+end
 
 
 
