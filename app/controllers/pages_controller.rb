@@ -12,6 +12,7 @@ end
 
 def contest
   @header = "welcome to the contest page"
+  redirect_to "/welcome"
 end
 
 def kitten
@@ -25,6 +26,10 @@ def set_kitten_url
   @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
 end
 
+def contest
+  flash[:notice] = "Sorry, the contest has ended"
+  redirect_to "/welcome"
+end
 
 
 
