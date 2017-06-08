@@ -4,6 +4,8 @@ get '/' => 'pages#welcome'
 
 get '/welcome' => 'pages#welcome'
 
+get '/about' => 'pages#about'
+
 
 
 
