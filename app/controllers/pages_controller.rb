@@ -6,13 +6,13 @@ def welcome
   @header = "Welcome to the welcome page"
 end
 
-def about
+def about_path
   @header = "welcome to the about page"
 end
 
-def contest
+def contest_path
   @header = "welcome to the contest page"
-  redirect_to "/welcome"
+  redirect_to root_path
 end
 
 def kitten
@@ -28,7 +28,7 @@ end
 
 def contest
   flash[:notice] = "Sorry, the contest has ended"
-  redirect_to "/welcome"
+  redirect_to root_path
 end
 
 def secrets
@@ -36,7 +36,7 @@ def secrets
     redirect_to "http://www.google.com"
   elsif params[:magic_word] != "potter"
      flash[:notice] = "You shall not pass!"
-     redirect_to "/"
+     redirect_to root_path
   end
 end
 
